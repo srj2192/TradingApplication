@@ -1,0 +1,28 @@
+signals:
+ - id: 1
+   algo: false
+   setup: true
+   reverse: false
+   calculate: true
+   params:
+    - param: 1
+      value: 60
+ - id: 2
+   algo: false
+   setup: false
+   reverse: true
+   calculate: false
+   params:
+    - param: 1
+      value: 80
+ - id: 3
+   algo: false
+   setup: false
+   reverse: true
+   calculate: true
+   params:
+    - param: 1
+      value: 90
+    - param: 2
+      value: 15
+   
