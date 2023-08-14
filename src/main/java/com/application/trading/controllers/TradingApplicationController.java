@@ -19,6 +19,12 @@ public class TradingApplicationController {
 	@Autowired
 	private ISignalHandler signalHandler;
 	
+	
+	/**
+     * invoke trading algorithm based on the signal received
+     * @param signal the signal for which algorithm needs to be invoked
+     * @return the status of algorithm whether `Success` or `Failed`
+     */
 	@PostMapping("/signals/{signal}")
 	public String ProcessSignals(
 			@PathVariable("signal") Integer signal

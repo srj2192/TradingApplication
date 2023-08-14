@@ -12,7 +12,13 @@ import org.yaml.snakeyaml.constructor.Constructor;
 
 @Configuration
 public class SignalConfig {
+	/**
+     * Reads SignalConfig from the .yaml
+     * @param signal the signal for which algorithm needs to be invoked
+     * @return the status of algorithm whether `Success` or `Failed`
+     */
 	
+//	TODO: consider moving the config to DB/memory store when size increases. 
 	public List<Signal> LoadYaml() {
 		Yaml yaml = new Yaml(new Constructor(Signals.class));
 		InputStream inputStream = this.getClass().getClassLoader().getResourceAsStream("static/signal_config.yml");
